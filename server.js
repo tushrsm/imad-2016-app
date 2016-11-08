@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/tushar-01', function (req, res) {
-  res.send(tushar-01 reqested');
+  res.send('tushar-01 reqested');
 });
 
 
