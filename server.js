@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles ={
-`tushar-01 :{
-title:'tushar-01',
+`artical-one :{
+title:'artical-one',
 heading: 'hello guys',
 date: '08/11/2016',
 content:     `<div>
@@ -20,8 +20,8 @@ content:     `<div>
             </div>
         </div>`
 },
-`tushar-02 :{
-title:'tushar-02',
+`artical-two :{
+title:'artical-two',
 heading: 'hello guys',
 date: '10/11/2016',
 content:     `<div>
@@ -34,8 +34,8 @@ content:     `<div>
             </div>
         </div>`
 },
-`tushar-03 :{
-title:'tushar-01',
+`artical-three :{
+title:'artical-three',
 heading: 'hello guys',
 date: '11/11/2016',
 content:     `<div>
