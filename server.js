@@ -19,6 +19,38 @@ content:     `<div>
             </div>
         </div>`
 };
+
+var htmltemplate=`
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+         <link href="/ui/style.css" rel="stylesheet" />
+        <style>
+   
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div> 
+                <a href='/'>Home</a> 
+            </div>
+            <div>
+               ${heading}
+            </div>
+            <div>
+                ${date}
+            </div>
+            <hr/>
+            <div>
+           ${content}
+            </div>
+        </div>
+    </body>
+</html>
+;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
