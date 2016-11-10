@@ -19,7 +19,11 @@ content:     `<div>
             </div>
         </div>`
 };
-
+function createTemplate (data){
+    var title=data.title
+    var headig=data.heading
+    var date=data.date
+    var content=data.content
 var htmltemplate=`
 <html>
     <head>
@@ -50,13 +54,14 @@ var htmltemplate=`
     </body>
 </html>
 `;
-
+return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/tushar-01', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'tushar-01.html'));
+ res.send(createTemplate(tushar01));
 });
 
 app.get('/tushar-02', function (req, res) {
