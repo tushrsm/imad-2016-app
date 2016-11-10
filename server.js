@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var tushar01 ={
+var articles ={
+tushar01 :{
 title:'tushar-01',
 heading: 'hello guys',
 date: '08/11/2016',
@@ -18,7 +19,37 @@ content:     `<div>
                 are  you enjoy????
             </div>
         </div>`
-};
+},
+tushar02:{
+title:'tushar-02',
+heading: 'hello guys',
+date: '10/11/2016',
+content:     `<div>
+                      <p> 
+                these for 2nd    hi im Tushar Mandavkar,i like to be anew app devloper. 
+                    </p>
+            </div>
+            <div>
+                are  you enjoy????
+            </div>
+        </div>`
+},
+tushar03:{
+title:'tushar-01',
+heading: 'hello guys',
+date: '11/11/2016',
+content:     `<div>
+                      <p> 
+                these for 3rd    hi im Tushar Mandavkar,i like to be anew app devloper. 
+                    </p>
+            </div>
+            <div>
+                are  you enjoy????
+            </div>
+        </div>`
+}
+    };
+
 function createTemplate (data){
     var title=data.title;
     var heading=data.heading;
@@ -66,8 +97,9 @@ app.get('/tushar-01', function (req, res) {
  res.send(createTemplate(tushar01));
 });
 
-app.get('/tushar-02', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'tushar-02.html'));
+app.get('/articalName', function (req, res) {
+ var articleName=req.pqrqms.articlename;
+res.send(createTemplate(articles[articlsName]));
 });
 
 app.get('/tushar-03', function (req, res) {
