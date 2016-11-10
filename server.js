@@ -20,10 +20,10 @@ content:     `<div>
         </div>`
 };
 function createTemplate (data){
-    var title=data.title
-    var headig=data.heading
-    var date=data.date
-    var content=data.content
+    var title=data.title;
+    var headig=data.heading;
+    var date=data.date;
+    var content=data.content;
 var htmltemplate=`
 <html>
     <head>
