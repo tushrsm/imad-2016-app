@@ -93,9 +93,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/tushar-01', function (req, res) {
- res.send(createTemplate(tushar01));
-});
+
 
 app.get('/articalName', function (req, res) {
  var articleName=req.pqrqms.articlename;
