@@ -5,6 +5,20 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var tushar01 ={
+title:'tushar-01',
+heading: 'hello guys',
+date: '08/11/2016',
+content:     `<div>
+                      <p> 
+                    hi im Tushar Mandavkar,i like to be anew app devloper. 
+                    </p>
+            </div>
+            <div>
+                are  you enjoy????
+            </div>
+        </div>`
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -13,6 +27,13 @@ app.get('/tushar-01', function (req, res) {
  res.sendFile(path.join(__dirname, 'ui', 'tushar-01.html'));
 });
 
+app.get('/tushar-02', function (req, res) {
+ res.sendFile(path.join(__dirname, 'ui', 'tushar-02.html'));
+});
+
+app.get('/tushar-03', function (req, res) {
+ res.sendFile(path.join(__dirname, 'ui', 'tushar-03.html'));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
